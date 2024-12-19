@@ -1,0 +1,16 @@
+{% extends 'ecom/homebase.html' %}
+{% load static %}
+{% block content %}
+<br><br><br>
+<img src="{% static "images/logout_img.png" %}"  style="width:800px; height:100px; padding-left:400px;">
+<form method="post" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <button type="submit">Logout</button>
+</form>
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br>
+
+
+{% endblock content %}
